@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Game</title>
+    <style>
+        body{
+            margin:0;
+            font-family: sans-serif;
+            /* background-color: rgba(0,0,0,0.5); */
+        }
+        .s_score{
+            position:fixed;
+            top:10px;
+            left:10px;
+            pointer-events:none;
+        }
+        .s_score span{
+            color:#fff;
+            font-size: 20px;
+            font-family: sans-serif;
+            user-select: none;
+
+        }
+       .modal{
+           position:fixed;
+           top:0;
+           left:0;
+           right:0;
+           bottom:0;
+           background-color: rgba(87, 69, 69, 0.1);
+           width:100vw;
+           height:100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           z-index: 2;
+           /* display: none; */
+       }
+       .modal_inner{
+           max-width: 400px;
+           padding:20px;
+           background-color: #fff;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+       }
+       button{
+           /* width: 100px; */
+           padding:10px 15px;
+           /* background-color: wheat; */
+           border-radius: 10px;
+           border:none;
+           cursor:pointer;
+
+       }
+       button:hover,
+       button:focus
+       {
+           outline: none;
+           border:none;
+       }
+    </style>
+</head>
+<body>
+    <div class="s_score"><span>Score:</span><span id="score">0</span></div>
+    <canvas></canvas>
+    <div class="modal">
+        <div class="modal_inner">
+            <span class="points">0</span>
+            <p>Points</p>
+            <button id="btn">Start Game</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
